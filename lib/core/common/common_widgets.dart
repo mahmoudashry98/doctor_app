@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CommonWidgets {
   static Widget appText(
@@ -35,14 +34,4 @@ class CommonWidgets {
   
 }
 
-Widget appHSpace(double height) {
-  return SizedBox(
-    height: height.h,
-  );
-}
 
-Widget appVSpace(double width) {
-  return SizedBox(
-    width: width.w,
-  );
-}
