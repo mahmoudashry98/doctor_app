@@ -9,63 +9,81 @@ class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
+  final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
   final Color? backgroundColor;
+  final TextEditingController? controller;
+  final Function(String?) validator;
+  final TextInputType keyboardType;
   const AppTextFormField({
     Key? key,
     this.contentPadding,
     this.focusedBorder,
     this.enabledBorder,
+    this.inputTextStyle,
     this.hintStyle,
     required this.hintText,
     this.isObscureText,
     this.suffixIcon,
     this.backgroundColor,
+    this.controller,
+    required this.validator,
+    required this.keyboardType,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
+      controller: controller,
       decoration: InputDecoration(
         isDense: true,
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
-        border: InputBorder.none,
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10.r),
               borderSide: const BorderSide(
                 color: AppColor.mainBlue,
                 width: 1.3,
               ),
+              borderRadius: BorderRadius.circular(16.0),
             ),
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.0),
               borderSide: const BorderSide(
                 color: AppColor.lighterGray,
                 width: 1.3,
               ),
+              borderRadius: BorderRadius.circular(16.0),
             ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16.0),
           borderSide: const BorderSide(
-            color: AppColor.lighterGray,
+            color: Colors.red,
             width: 1.3,
           ),
+          borderRadius: BorderRadius.circular(16.0),
         ),
-        hintText: hintText,
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1.3,
+          ),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
         hintStyle: hintStyle ?? Styles.font14LightGrayRegular,
+        hintText: hintText,
         suffixIcon: suffixIcon,
-        disabledBorder: InputBorder.none,
+        fillColor: backgroundColor ?? AppColor.moreLightGray,
         filled: true,
-        fillColor: backgroundColor ?? AppColor.lightestGray,
       ),
       obscureText: isObscureText ?? false,
       style: Styles.font14DarkBlueMedium,
+      validator: (value) {
+        return validator(value);
+      },
     );
   }
 }
