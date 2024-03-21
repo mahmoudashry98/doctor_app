@@ -4,11 +4,10 @@ import 'package:doctor_app/features/signUp/logic/sign_up_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../data/models/sign_up_request_body.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
-  final SignUpRepository _signUpRepository;
-  SignUpCubit(this._signUpRepository) : super(const SignUpState.initial());
+  final SignUpRepo _signUpRepo;
+  SignUpCubit(this._signUpRepo) : super(const SignUpState.initial());
 
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -20,7 +19,7 @@ class SignUpCubit extends Cubit<SignUpState> {
 
   void emitSignUpStates() async {
     emit(const SignUpState.signUpLoading());
-    final response = await _signUpRepository.signUp(
+    final response = await _signUpRepo.signUp(
       SignUpRequestBody(
         name: nameController.text,
         email: emailController.text,

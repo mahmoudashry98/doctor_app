@@ -5,8 +5,8 @@ import 'package:doctor_app/features/signUp/data/model/sign_up_request_body.dart'
 import 'package:doctor_app/features/signUp/data/model/sign_up_response.dart';
 
 
-class SignUpRepository {
-  final ApiService _apiService;
+class SignUpRepo {
+ final ApiService _apiService;
 
   SignUpRepo(this._apiService);
 
