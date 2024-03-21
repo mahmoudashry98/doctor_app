@@ -1,8 +1,8 @@
 import 'package:doctor_app/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 
-class TermsAndConditionText extends StatelessWidget {
-  const TermsAndConditionText({super.key});
+class TermsAndConditionsText extends StatelessWidget {
+  const TermsAndConditionsText({super.key});
 
   @override
   Widget build(BuildContext context) {

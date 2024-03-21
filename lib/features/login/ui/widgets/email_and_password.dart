@@ -99,7 +99,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             hasLowerCase: hasLowerCase,
             hasUpperCase: hasUpperCase,
             hasNumber: hasNumber,
-            hasSpecialCharacter: hasSpecialCharacter,
+            hasSpecialCharacters: hasSpecialCharacter,
             hasMinimumLength: hasMinLength,
             hasMinLength: hasMinLength,
           ),

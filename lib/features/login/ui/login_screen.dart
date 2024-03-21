@@ -1,9 +1,8 @@
 import 'package:doctor_app/core/helpers/spacing.dart';
 import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/core/widgets/app_text_button.dart';
-import 'package:doctor_app/features/login/data/models/login_request_body.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
-import 'package:doctor_app/features/login/ui/widgets/already_have_account_text.dart';
+import 'package:doctor_app/features/login/ui/widgets/not_have_account_text.dart';
 import 'package:doctor_app/features/login/ui/widgets/email_and_password.dart';
 import 'package:doctor_app/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:doctor_app/features/login/ui/widgets/terms_and_condition_text.dart';
@@ -37,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                 Column(
                   children: [
                     const EmailAndPassword(),
-                    appHSpace(40),
+                    appHSpace(30),
                     AppTextButton(
                       buttonText: 'Login',
                       textStyle: Styles.font16WhiteSemiBold,
@@ -46,9 +45,9 @@ class LoginScreen extends StatelessWidget {
                       },
                     ),
                     appHSpace(16),
-                    const TermsAndConditionText(),
-                    appHSpace(45),
-                    const AlreadyHaveAccountText(),
+                    const TermsAndConditionsText(),
+                    appHSpace(25),
+                    const NotHaveAccountText(),
                     const LoginBlocListener(),
                   ],
                 ),
