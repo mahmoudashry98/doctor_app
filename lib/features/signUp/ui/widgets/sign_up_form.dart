@@ -47,6 +47,12 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   @override
+  void dispose() {
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Form(
       key: context.read<SignUpCubit>().formKey,
@@ -148,11 +154,5 @@ class _SignUpFormState extends State<SignUpForm> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    passwordController.dispose();
-    super.dispose();
   }
 }
