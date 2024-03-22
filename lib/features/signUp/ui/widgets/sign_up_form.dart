@@ -136,7 +136,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
             keyboardType: TextInputType.visiblePassword,
           ),
-          appHSpace(24),
+          appHSpace(14),
           PasswordValidations(
             hasLowerCase: hasLowercase,
             hasUpperCase: hasUppercase,

@@ -11,7 +11,6 @@ import '../../../core/helpers/spacing.dart';
 import '../../../core/widgets/app_text_button.dart';
 import '../logic/sign_up_cubit.dart';
 
-
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -20,7 +19,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 30.h),
+          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,11 +33,11 @@ class SignUpScreen extends StatelessWidget {
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
                   style: Styles.font14GrayRegular,
                 ),
-                appHSpace(36),
+                appHSpace(8),
                 Column(
                   children: [
                     const SignUpForm(),
-                    appHSpace(40),
+                    appHSpace(10),
                     AppTextButton(
                       buttonText: "Create Account",
                       textStyle: Styles.font16WhiteSemiBold,
@@ -48,7 +47,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     appHSpace(16),
                     const TermsAndConditionsText(),
-                    appHSpace(30),
+                    appHSpace(10),
                     const AlreadyHaveAccountText(),
                     const SignUpBlocListener(),
                   ],
