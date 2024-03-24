@@ -29,7 +29,17 @@ jobs:
         ruby-version: "3.2.3"
         bundler-cache: true
         working-directory: android  # Adjust to your Android project directory
-        run: bundle lock --add-platform x86_64-linux
+      
+    - name: Add current platform to Bundler lockfile
+      run: bundle lock --add-platform x86_64-linux
+      working-directory: android  # Adjust to your Android project directory
+      
+    - name: Install dependencies
+      run: bundle install --jobs 4
+      working-directory: android  # Adjust to your Android project directory
+      
+
+    
     - name: Build and Distribute App
       env:
         FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
