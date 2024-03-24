@@ -46,7 +46,7 @@ class SignUpScreen extends StatelessWidget {
                         validateThenDoSignUp(context);
                       },
                     ),
-                    appHSpace(16),
+                    appHSpace(15),
                     const TermsAndConditionsText(),
                     appHSpace(10),
                     const AlreadyHaveAccountText(),
