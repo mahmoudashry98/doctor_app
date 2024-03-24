@@ -2,10 +2,10 @@ import 'package:doctor_app/core/helpers/extensions.dart';
 import 'package:doctor_app/core/routing/routes.dart';
 import 'package:doctor_app/core/theme/app_color.dart';
 import 'package:doctor_app/core/theme/styles.dart';
+import 'package:doctor_app/features/signUp/logic/sign_up_state.dart';
 import 'package:doctor_app/features/signup/logic/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../logic/sign_up_state.dart';
 
 class SignUpBlocListener extends StatelessWidget {
   const SignUpBlocListener({super.key});
