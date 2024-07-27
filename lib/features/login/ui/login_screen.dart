@@ -1,5 +1,4 @@
 import 'package:doctor_app/core/helpers/spacing.dart';
-import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/core/widgets/app_text_button.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_app/features/login/ui/widgets/not_have_account_text.dart';
@@ -9,6 +8,8 @@ import 'package:doctor_app/features/login/ui/widgets/terms_and_condition_text.da
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../core/theme/styles.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -25,12 +26,12 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Text(
                   'Welcome Back',
-                  style: Styles.font24BlueBold,
+                  style: TextStyles.font24BlueBold,
                 ),
                 appHSpace(8),
                 Text(
                   'We\'re excited to have you back, can\'t wait to see what you\'ve been up to since you last logged in.',
-                  style: Styles.font14GrayRegular,
+                  style: TextStyles.font14GrayRegular,
                 ),
                 appHSpace(36),
                 Column(
@@ -39,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                     appHSpace(30),
                     AppTextButton(
                       buttonText: 'Login',
-                      textStyle: Styles.font16WhiteSemiBold,
+                      textStyle: TextStyles.font16WhiteSemiBold,
                       onPressed: () {
                         validateThenDoLogin(context);
                       },

@@ -1,11 +1,12 @@
 import 'package:doctor_app/core/helpers/extensions.dart';
 import 'package:doctor_app/core/routing/routes.dart';
 import 'package:doctor_app/core/theme/app_color.dart';
-import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/theme/styles.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -54,7 +55,7 @@ class LoginBlocListener extends StatelessWidget {
           ),
           content: Text(
             error,
-            style: Styles.font15DarkBlueMedium,
+            style: TextStyles.font15DarkBlueMedium,
           ),
           actions: [
             TextButton(
@@ -63,7 +64,7 @@ class LoginBlocListener extends StatelessWidget {
               },
               child: Text(
                 'Get it',
-                style: Styles.font14BlueSemiBold,
+                style: TextStyles.font14BlueSemiBold,
               ),
             ),
           ],

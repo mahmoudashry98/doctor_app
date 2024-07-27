@@ -1,11 +1,12 @@
 import 'package:doctor_app/core/helpers/extensions.dart';
 import 'package:doctor_app/core/routing/routes.dart';
 import 'package:doctor_app/core/theme/app_color.dart';
-import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/features/signUp/logic/sign_up_state.dart';
 import 'package:doctor_app/features/signup/logic/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/theme/styles.dart';
 
 class SignUpBlocListener extends StatelessWidget {
   const SignUpBlocListener({super.key});
@@ -83,7 +84,7 @@ class SignUpBlocListener extends StatelessWidget {
         ),
         content: Text(
           error,
-          style: Styles.font15DarkBlueMedium,
+          style: TextStyles.font15DarkBlueMedium,
         ),
         actions: [
           TextButton(
@@ -92,7 +93,7 @@ class SignUpBlocListener extends StatelessWidget {
             },
             child: Text(
               'Got it',
-              style: Styles.font14BlueSemiBold,
+              style: TextStyles.font14BlueSemiBold,
             ),
           ),
         ],

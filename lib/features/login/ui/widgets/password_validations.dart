@@ -1,9 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:doctor_app/core/helpers/spacing.dart';
 import 'package:doctor_app/core/theme/app_color.dart';
-import 'package:doctor_app/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/theme/styles.dart';
 
 class PasswordValidations extends StatelessWidget {
   final bool hasLowerCase;
@@ -30,8 +31,7 @@ class PasswordValidations extends StatelessWidget {
         appHSpace(4),
         buildValidationRow('At least 1 upperCase letter', hasUpperCase),
         appHSpace(4),
-        buildValidationRow(
-            'At least 1 special character', hasSpecialCharacters),
+        buildValidationRow('At least 1 special character', hasSpecialCharacters),
         appHSpace(4),
         buildValidationRow('At least 1 number', hasNumber),
         appHSpace(4),
@@ -46,19 +46,16 @@ class PasswordValidations extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 5.r,
-          backgroundColor:
-              hasValidated ? AppColor.mainBlue : AppColor.lighterGray,
+          backgroundColor: hasValidated ? AppColor.mainBlue : AppColor.lighterGray,
         ),
         appVSpace(6),
         Text(
           text,
-          style: Styles.font13DarkBlueRegular.copyWith(
+          style: TextStyles.font13DarkBlueRegular.copyWith(
             decoration: hasValidated ? TextDecoration.lineThrough : null,
             decorationColor: Colors.red,
             decorationThickness: 2,
-            color: hasValidated
-                ? AppColor.black.withOpacity(0.5)
-                : AppColor.darkBlue,
+            color: hasValidated ? AppColor.darkBlue.withOpacity(0.5) : AppColor.darkBlue,
           ),
         ),
       ],

@@ -1,11 +1,12 @@
 import 'package:doctor_app/core/helpers/app_regex.dart';
 import 'package:doctor_app/core/helpers/spacing.dart';
-import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/core/widgets/app_text_form_field.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_app/features/login/ui/widgets/password_validations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/theme/styles.dart';
 
 class EmailAndPassword extends StatefulWidget {
   const EmailAndPassword({super.key});
@@ -113,7 +114,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       alignment: AlignmentDirectional.centerEnd,
       child: Text(
         'Forgot Password?',
-        style: Styles.font13BlueRegular,
+        style: TextStyles.font13BlueRegular,
       ),
     );
   }

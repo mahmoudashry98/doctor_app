@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:doctor_app/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:doctor_app/core/theme/app_color.dart';
-import 'package:doctor_app/core/theme/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
@@ -73,14 +73,14 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-        hintStyle: hintStyle ?? Styles.font14LightGrayRegular,
+        hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
         fillColor: backgroundColor ?? AppColor.moreLightGray,
         filled: true,
       ),
       obscureText: isObscureText ?? false,
-      style: Styles.font14DarkBlueMedium,
+      style: TextStyles.font14DarkBlueMedium,
       validator: (value) {
         return validator(value);
       },
